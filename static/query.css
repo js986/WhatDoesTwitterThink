@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #CFFFC2;
+
+    font-family: 'Arimo', sans-serif;
+}
+
+.go-back {
+    margin: 20px;
+    display: inline-block;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: left;
+    padding: 8px 16px;
+    background-color: #1A7A89;
+    color: white;
+    border-radius: 5%;
+}
+
+.back-text {
+    margin: 0;
+    padding: 0;
+}
+
+#arrow {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header-1 {
+    color: #1A7A89;
+    font-size:48px;
+    font-style: bold;
+    max-width: 54%;
+    text-align: center;
+}
+/*
+.slider-wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    height: 286px;
+    overflow: hidden;
+}
+*/
+.slider-tweet { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 286px;
+    /*margin: 5px;*/
+    box-sizing: border-box;
+}
+
+/*
+.num0 {
+    animation: slide 8s linear infinite;
+}
+*/
+
+.icon {
+    color: #1A7A89;
+    width: 128px;
+    height: 128px;
+    margin: 0;
+    padding: 0;
+}
+/*
+@keyframes slide {
+    0% {margin-top: -5148px;}
+    5% {margin-top: -5148px;}
+    10% {margin-top: -4576px;}
+    15% {margin-top: -4576px;}
+    20% {margin-top: -4004px;}
+    25% {margin-top: -4004px;}
+    30% {margin-top: -3432px;}
+    35% {margin-top: -3432px;}
+    40% {margin-top: -2860px;}
+    45% {margin-top: -2860px;}
+    50% {margin-top: -2288px;}
+    55% {margin-top: -2288px;}
+    60% {margin-top: -1716px;}
+    65% {margin-top: -1716px;}
+    70% {margin-top: -1144px;}
+    75% {margin-top: -1144px;}
+    80% {margin-top: -572px;}
+    85% {margin-top: -572px;}
+    90% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+*/
+.tweet-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-user-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.tweet-username {
+    display:flex;
+    flex-direction: column;
+}
+
+.tweet {
+    font-size: 18px;
+    color:#08090A;
+    width: 564px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 24px;
+    color:#08090A;
+    max-width: 440px;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.screen-name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #808080;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+.profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    margin: 0;
+    padding: 0;
+}

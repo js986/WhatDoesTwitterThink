@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{%block head %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='query.css') }}"/>
+{% endblock %}
+{% block content %}
+<a class="go-back" href="{{url_for('index')}}">
+    <span id="arrow" class="iconify" data-icon="eva:arrow-back-fill"></span>
+    <p class="back-text">Go back to search</p>
+</a>
+<div class="container">
+    <h1 class="header-1">Twitter has {{view}} of {{query}}</h1>
+    <div class="slider-wrapper">
+        <div class="slider">
+            {% for index,row in tweets_data.iterrows() %}
+                <div class="slider-tweet num{{index}}">
+                    {% if row["classification"] == 'pos' %}
+                        <span class="iconify icon" data-icon="bx:bx-happy"></span>
+                    {% else %}
+                        <span class="iconify icon" data-icon="bx:bx-sad"></span>
+                    {% endif %}
+                    <div class="tweet-content">
+                        <div class="tweet-user-info">
+                            <img class="profile-pic" src="{{row['profile_pic']}}" />
+                            <div class="tweet-username">
+                                <h5 class="name">{{ row["name"] }}</h5>
+                                <h6 class="screen-name">@{{ row["screen_name"] }}</h6>
+                            </div>
+                        </div>
+                        <p class="tweet">{{ row["tweet"] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
